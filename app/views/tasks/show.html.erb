@@ -1,0 +1,10 @@
+<h1> Hello from the Show Page </h1>
+
+<h2>Name of the task: <%= @task.title %></h2>
+<h2>Description of the task: <%= @task.details %></h2>
+<h2><%= @task.completed %></h2>
+
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
